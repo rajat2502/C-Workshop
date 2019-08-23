@@ -1,0 +1,43 @@
+.logo{
+  width: 180px;
+  border: none !important;
+  background: none !important;
+  margin: 0 15px !important;
+}
+
+.logo:hover{
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+table, th, td {
+  border: 2px solid white;
+  border-collapse: collapse;
+  text-align: center !important;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.flowchart{
+  border: none !important;
+  background: white !important;
+  height: 500px !important;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container code{
+  width: 450px;
+  margin: 20px;
+}
+
+.no-border{
+  background: none !important;
+  border: none !important;
+  height: 400px;
+}

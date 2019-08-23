@@ -7,12 +7,14 @@
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #191919;
-  background-color: #191919; }
+  background: black;
+  background-color: black; }
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -46,13 +48,17 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
+
+p, td{
+  font-family: 'Lato', sans-serif;
+}
 
 .reveal h1 {
   font-size: 2.5em; }

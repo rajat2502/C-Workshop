@@ -1,14 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Workshop On C | NCS</title>
+
+		<meta charset="utf-8">
+		<meta name="description" content="C programming Workshop">
+		<meta name="author" content="Nibble Computer Society">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -21,29 +32,694 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./css/styles.css">
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-transition="convex">
+					<h2>Introduction to C <br> Programming</h2>
+					<a href="http://hackncs.com/">
+						<img src="img/ncs_logo.png" alt="" class="logo">
+					</a>
+					<p>
+						<small>
+							Press Spacebar for next slide
+							<br>
+							Esc or 'o' for overview</small>
+					</p>
+				</section>
+
+				<section id="fragments" data-transition="convex">
+					<h2>What’s programming?</h2>
+					<p class="fragment fade-up">
+						Programming is a way to instruct the computer to perform various tasks
+					</p>
+				</section>
+
+				<section data-transition="convex">
+					<h2>LANGUAGES</h2>
+					
+					<table class="text-center">
+						<thead>
+							<th class="text-center">How normal people see it</th>
+							<th class="text-center">How Geeks see it</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td class="text-center">Hindi</td>
+								<td class="text-center">Python</td>
+							</tr>	
+							<tr>
+								<td class="text-center">English</td>
+								<td class="text-center">C++</td>
+							</tr>
+							<tr>
+								<td class="text-center">Spanish</td>
+								<td class="text-center">Java</td>
+							</tr>
+							<tr>
+								<td class="text-center">Tamil</td>
+								<td class="text-center">Ruby</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</section>
+
+				<section data-transition="convex">
+					<section>
+						<img src="./img/c-logo.png" alt="" class="logo">
+						<p><small>(press SPACE to navigate down)</small></p>
+					</section>
+
+					<section>
+						<h5>The C language was developed & released in the <br> year 1972 by</h5>
+						<img src="./img/Dennis.jpg" alt="" class="logo">
+						<P><small>Dennis Ritchie</small></P>
+						<p>He also helped in developing UNIX.</p>
+					</section>
+
+					<section>
+							<h4>							
+								The latest version of C is C18
+								<br>
+								because 
+								<br>
+								 it was
+								<br>
+								Published in 2018
+							</h4>	
+					</section>	
+				</section>
+
+				<section data-transition="convex">
+					<h3>
+						Stuff developed using C
+					</h3>	
+					<p><small>(with the help of C++)</small></p>
+					<ul>
+						<li class="fragment fade-up">LINUX OS</li>
+						<li class="fragment fade-up">macOS</li>
+						<li class="fragment fade-up">Python</li>
+						<li class="fragment fade-up">JAVA</li>
+						<li class="fragment fade-up">MySQL</li>
+						<li class="fragment fade-up">and much more...</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<h3>FIRST CODE OF EVERY GEEK</h3>	
+					<pre><code>
+                #include&lt;stdio.h&gt;
+                            
+                int main()
+                              
+                {        
+                  printf("Hello World!");
+                  return 0;
+                }
+          </code></pre>
+				</section>
+
+				<section data-transition="convex">
+					<h6>When your code outputs <br> “Hello World!”</h6>
+					<img src="./img/hello.JPG" alt="" class="fragment no-border">
+				</section>
+
+				<section data-transition="convex">
+					<h2>IMPORTANT</h2>	
+					<p class="fragment" style="margin: 30px;">‘Never forget the’ </p>
+					<h1 class="fragment">;</h1>
+				</section>
+
+				<section data-transition="convex">
+					<section>
+						<h3>DataTypes in C</h3>
+						<img src="./img/datatypes.JPG" alt="" class="fragment fade-in" style="border:none;">
+					</section>	
+
+					<section>
+						<table style="width: 600px;">
+						<thead>
+							<th class="text-center">Char</th>
+						</thead>	
+						<tbody>
+							<tr style="height: 130px;">
+								<td class="text-center">takes in character like alphabets</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+
+					<section>
+						<table style="width: 600px;">
+						<thead>
+							<th class="text-center">int</th>
+						</thead>	
+						<tbody>
+							<tr style="height: 130px;">
+								<td class="text-center">takes in Integer <br> values</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+
+					<section>
+						<table style="width: 600px;">
+						<thead>
+							<th class="text-center">Float</th>
+						</thead>	
+						<tbody>
+							<tr style="height: 130px;">
+								<td class="text-center">stores decimal number with single precision</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+
+					<section>
+						<table style="width: 600px;">
+						<thead>
+							<th class="text-center">Double</th>
+						</thead>	
+						<tbody>
+							<tr style="height: 130px;">
+								<td class="text-center">stores decimal number with double precision</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+				</section>
+
+				<section data-transition="convex">
+					<section>
+						<h3>Basic syntaxes</h3>
+					</section>
+
+					<section>
+						<h3>Printing:</h3>
+						<pre><code>
+	printf(“format specifier”, variable_name);
+          </code></pre>
+					</section>
+
+					<section>
+						<h3>Scanning:</h3>
+						<pre><code>
+	scanf(“format specifier”, variable_address);
+          </code></pre>
+					</section>	
+
+					<section>
+					<table>
+						<thead>
+							<th>Format Specifier</th>
+							<th>Datatype</th>
+						</thead>	
+						<tbody>
+							<tr>
+								<td>%c</td>
+								<td>Character</td>
+							</tr>	
+							<tr>
+								<td>%f</td>
+								<td>Float++</td>
+							</tr>
+							<tr>
+								<td>%d</td>
+								<td>Integer</td>
+							</tr>
+						</tbody>
+					</table>	
+					</section>
+				</section>
+
+					<section data-transition="convex">
+						<h3>Operators</h3>
+					</section>	
+
+					<section data-transition="convex">
+					<table>
+						<tbody>
+							<tr>
+								<td>Unary</td>
+								<td style="width: 400px">+ - ! ~ ++ -- (type) * & sizeof	</td>
+								<td style="width: 300px">Right to Left</td>
+							</tr>
+							<tr>
+                <td>Multiplicative</td>
+                <td>* / %</td>
+                <td>Left to Right</td>
+              </tr>
+              <tr>
+                <td>Additive</td>
+                <td>+ -</td>
+                <td>Left to Right</td>
+              </tr>
+              <tr>
+                <td>Shift</td>
+                <td>&lt;&lt; &gt;&gt;</td>
+                <td>Left to Right</td>
+              </tr>
+              <tr>
+                <td>Relational</td>
+                <td>&lt; &lt;= &gt; &gt;=</em></td>
+                <td>Left to Right</td>
+              </tr>
+               <tr>
+                <td>Equity</td>
+                <td>== !=</em></td>
+                <td>Left to Right</td>
+              </tr>
+               <tr>
+                <td>Bitwise AND</td>
+                <td>&amp;</em></td>
+                <td>Left to Right</td>
+              </tr>
+               <tr>
+                <td>Bitwise XOR</td>
+                <td>^</em></td>
+                <td>Left to Right</td>
+              </tr>
+						</tbody>	
+					</table>
+
+					<p style="margin-top: 0;">Table Continued...</p>
+				</section>
+
+				<section data-transition="convex">
+					<table>
+            <tbody>
+              <tr>
+                <td>Bitwise OR</td>
+                <td style="width: 30px">|</em></td>
+                <td style="width: 240px">Left to Right</td>
+              </tr>
+               <tr>
+                <td>Logical AND</td>
+                <td>&amp;&amp;</td>
+                <td>Left to Right</td>
+              </tr>
+               <tr>
+                <td>Logical OR</td>
+                <td>||</td>
+                <td>Left to Right</td>
+              </tr>
+               <tr>
+                <td>Conditional</td>
+                <td>? :</em></td>
+                <td>Right to Left</td>
+              </tr>
+            </tbody>
+          </table>
+				</section>
+
+				<section>
+					<section data-transition="convex">
+						<h2>Decision Making Structures</h2>
+					</section>
+
+					<section data-transition="convex">
+						<p class="">Condition block need to be executed or not is decided by the condition.</p>
+						<p class="">If the condition is "true" statement block will be executed, if condition is "false" then statement block will not be executed.</p>	
+					</section>	
+				</section>
+
+				<section data-transition="convex">
+					<h4 style="font-size: 50px">Decision Making Statements in C</h4>
+					<br>
+					<ul>
+						<li class="fragment fade-up">if statements</li>
+						<li class="fragment fade-up">if...else statements</li>
+						<li class="fragment fade-up">switch case statements</li>
+					</ul>
+				</section>
+
+				<section data-transition="convex">
+					<section>
+					<h3>If Statements</h3>
+					<pre><code>
+	If (condition 1 )
+  	{
+	   Executed if condition is true 
+ 	}
+					</code></pre>
+				</section>	
+
+				<section>
+					<h4>Flow Chart for If statement</h4>	
+					<img src="./img/if.png" alt="" class="flowchart">
+				</section>	
+				</section>
+
+				<section data-transition="convex">
+					<section>
+					<h3>IF …. Else </h3>
+					<pre><code>	
+	if (condition)	
+	  {
+	    Executes this block if condition is true 
+	  }
+
+	else
+	  {
+	    Executes this block if  condition is false 
+	  }
+		</code></pre>
+				</section>
+				
+				<section>
+					<h4>Flow chart for If Else statement</h4>	
+					<img src="./img/if-else.png" alt="" class="flowchart">
+				</section>
+				</section>	
+
+				<section data-transition="convex">
+					<section>
+					<h3>Switch Case </h3>
+					<pre><code>	
+	Switch (n)  {
+	case 1 :
+		Executed when n = 1
+		break;
+	case 2: 
+		Executed when n = 2
+		break;
+	default :
+		Executed when none of the cases are true
+
+</code></pre>
+				</section>
+				
+				<section>
+					<h4>Flow chart for Switch Case statement</h4>	
+					<img src="./img/switch.png" alt="" class="flowchart">
+				</section>
+				</section>	
+
+				<section data-transition="convex">
+					<h3>Loop</h3>
+					<br>
+					<p class="fragment fade-up">Loops in programming comes into use when we need to repeatedly execute a block of statements. <br> Until the statement turns False.
+</p>	
+				</section>
+
+					<section data-transition="convex">
+						<h3>Looping Statements</h3>	
+						<br>
+						<ul>
+							<li class="fragment fade-up">for Loop</li>
+							<li class="fragment fade-up">while Loop</li>
+							<li class="fragment fade-up">do while</li>
+						</ul>
+					</section>	
+
+				<section data-transition="convex">	
+					<section>
+						<h3>For loop</h3>
+						<br>
+						<pre><code>    
+   for ( initialisation ; termination condition ; upgradation)
+      {
+	 body of Loop
+      }
+			
+</code></pre>
+					</section>
+
+					<section>
+						<h4>FLOW OF THE FOR LOOP</h4>
+						<img src="./img/forloop.png" alt="" style="background-color: rgb(32, 32, 32); border:none; height: 500px">	
+					</section>
+				</section>
+
+					<section data-transition="convex">
+						<h3>While loop</h3>
+						<br>
+						<pre><code>
+             initialise loop counter;
+
+             while( test loop counter using a condition )
+              {
+                Do this;
+                And this;
+                Update loop counter;
+              }
+           </code></pre>
+					</section>
+
+					<section data-transition="convex">
+						<h3>Do While</h3>
+						<br>
+						<pre><code>
+            do 
+            {
+              this;
+              and this;
+              and this;
+            }
+            while(this condition is true);
+					 </code></pre>
+            <p><small><em>Note:</em> This loop executes for at least once irrespective of the test condition due to the “do” block.</small></p>
+					</section>
+
+					<section data-transition="convex">
+						<h4>FLOW OF THE WHILE AND DO WHILE LOOP</h4>	
+						<img src="./img/whilevsdowhileflowchart.png" alt="" class="flowchart">
+					</section>
+
+					<section data-transition="convex">
+						<h3>Want to try it out?</h3>
+						<br>
+						<ul>
+							<li>Print natural numbers from 1 to n.</li>
+							<li>Print all odd numbers between any two numbers.</li>
+							<li>Print the multiplication table of any number.</li>
+							<li>Calculate the product of the first ten natural numbers.</li>
+						</ul>	
+					</section>
+
+					<section data-transition="convex">
+						<h4>Congratulations !! You are getting better at this</h4>	
+						<img src="./img//congo.jpg" alt="" class="fragment fade-right" style="border: none;">
+					</section>
+
+					<section data-transition="convex">
+							<p>Moving on to some</p>
+							<h1>ADVANCED</h1>	
+							<p>topics</p>	
+					</section>
+
+					<section data-transition="convex">
+						<section>
+							<h3>ARRAY</h3>
+							<p class="fragment fade-up">Collection of items of the same datatype stored at contiguous memory locations</p>
+							<ul>
+								<li class="fragment fade-up">{1, 7, 3, 0, 2}</li>	
+								<li class="fragment fade-up">{‘G’, ‘E’, ‘E’, ‘K’}</li>
+								<li class="fragment fade-up">{‘this’, ‘is’, ‘an’, ‘array’}</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>ARRAY DECLARATION</h3>	
+							<p>In C, we can declare an array by specifying its type and size or by initializing it or by both.</p>
+							<h5 style="color: skyblue" class="fragment">BUT HOW?</h5>
+							<ol>
+								<li class="fragment">int arr[10];   (just the declaration)</li>
+								<li class="fragment">int arr[] = {10, 20, 30, 40}    (declaration as well as initialization without specifying size)</li>
+								<li class="fragment">int arr[6] = {10, 20, 30, 40}    (declaration, initialization as well as the size is also specified)</li>
+							</ol>
+						</section>
+
+						<section>
+							<h2>Very Important!!!</h2>
+							<br>	
+							<p class="fragment">Array indices starts at zero and go to one less than the size of the array</p>
+							<p class="fragment"><span style="text-decoration: underline">Example</span> : int arr[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90}</p>
+							<img src="./img/array.jpg" alt="" class="fragment">
+						</section>
+					</section>
+
+					<section data-transition="convex">
+						<section>
+						<h2>POINTERS</h2>	
+						<p style="font-si">It is a VARIABLE
+							<br>
+which holds
+<br>
+address of another variable of same data type</p>
+					</section>
+
+					<section>
+						<h4>To use pointers in C, we must understand these two “unary” operators</h4>	
+						<br>
+						<p><span style="color: skyblue">THE '&' OPERATOR</span> <--access Memory from Variable</p>
+						<p><span style="color: skyblue">THE '*' OPERATOR</span> <--access Variable from Memory</p>
+					</section>
+
+					<section>
+						<img src="./img/pointers.jpg" alt="">
+						<br>
+						<div class="flex-container">
+							<div class="fragment fade-right">Input:
+								<pre><code>
+ void main(){
+     int var = 10, *ptr;
+     ptr = &var;
+     printf("%d\n", var);
+     printf("%p\n", ptr);
+     printf("%d\n", *ptr);
+ }
+
+</code></pre>
+							</div>
+							<div class="fragment fade-left">Output:
+								<pre><code> 10
+ 0x7fff84ef7e7c
+ 10
+</code></pre>
+							</div>
+						</div>
+					</section>
+					</section>
+
+					<section data-transition="convex">
+						<h4>Phew, that was a lot to take in but you did it.
+</h4>
+						<img src="./img/emoji.png" class="no-border" style="height: 300px" alt="">
+					</section>
+
+					<section data-transition="convex">
+						<section>
+							<h2>Functions</h2>
+						</section>
+
+						<section>
+							<h4>A general breakdown of a function</h4>
+							<img src="./img/function.png" class="fragment fade-up no-border"  alt="">
+						</section>
+
+						<section>
+							<h4>Types of functions in C</h4>
+							<img src="./img/funtion-types.JPG" class="fragment fade-up no-border" alt="">
+						</section>
+
+						<section>
+							<h3>Ways to pass the arguments</h3>
+							<p><small>(In simplest words)</small></p>
+							<table>
+								<thead>
+									<tr class="text-center">
+										<th class="text-center">Pass by Value</th>
+										<th class="text-center">Pass by Reference</th>
+									</tr>	
+								</thead>
+								<tbody style="font-size: 32px">
+									<tr style="height: 108px">
+										<td class="text-center">We pass variable as function arguments</td>
+										<td class="text-center">We pass value address as function arguments</td>
+									</tr>
+									<tr style="height: 60px">
+										<td class="text-center">void  swap(int x, int y)</td>
+										<td class="text-center">void swap(int *x, int*y)</td>
+									</tr>
+								</tbody>
+               </table>
+						</section>
+					</section>
+
+					<section>
+							<section>
+								<h2>Algorithms</h2>
+							</section>
+
+							<section>
+								<h3 style="font-weight: bolder">Recursion</h3>
+								<p class="fragment fade-in">The process in which a function calls itself directly or indirectly</p>
+								<img src="./img/recursion.png" alt="" class="fragment no-border">
+							</section>
+
+							<section>
+								<h4>Let’s see how a Recursive Function works</h4>
+								<img src="./img/recursion-flowchart.png" alt="" class="no-border" style="height: 450px">
+							</section>
+					</section>
+				
+
+				
+			
 			</div>
+
 		</div>
 
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: false,
+				progress: true,
+				center: true,
+				hash: true,
+				anything: [ 
+				{
+					className: "random", 
+					defaults: {min: 0, max: 9}, 
+					initialize: (function(container, options){ 
+						container.innerHTML = Math.trunc( options.min + Math.random()*(options.max-options.min + 1) ); 
+						}) 
+				},
+				],
+				customcontrols: { 
+					slideNumberCSS : 'position: fixed; display: block; right: 90px; top: auto; left: auto; width: 50px; bottom: 30px; z-index: 31; font-family: Helvetica, sans-serif; font-size:  12px; line-height: 1; padding: 5px; text-align: center; border-radius: 10px; background-color: rgba(128,128,128,.5)',
+					controls: [ 
+						{ icon: '<i class="fa fa-caret-left"></i>', 
+							css: 'position: fixed; right: 60px; bottom: 30px; z-index: 30; font-size: 24px;', 
+							action: 'Reveal.prev(); return false;' 
+						}, 
+						{ icon: '<i class="fa fa-caret-right"></i>', 
+							css: 'position: fixed; right: 30px; bottom: 30px; z-index: 30; font-size: 24px;', 
+							action: 'Reveal.next(); return false;' 
+						},
+						{ icon: '<i class="fa fa-caret-up"></i>', 
+							css: 'position: fixed; right: 42px; bottom: 45px; z-index: 30; font-size: 24px;', 
+							action: 'Reveal.up(); return false;' 
+						},
+						{ icon: '<i class="fa fa-caret-down"></i>', 
+							css: 'position: fixed; right: 42px; bottom: 15px; z-index: 30; font-size: 24px;', 
+							action: 'Reveal.down(); return false;' 
+						}
+					] 
+				},
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/customcontrols/customcontrols.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
