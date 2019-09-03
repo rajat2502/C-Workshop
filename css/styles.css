@@ -41,3 +41,7 @@ table, th, td {
   border: none !important;
   height: 400px;
 }
+
+.links:hover{
+  background: rgba(255, 255, 255, 0.2) !important;
+}

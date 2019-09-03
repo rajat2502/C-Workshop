@@ -266,7 +266,7 @@
 				</section>
 
 					<section data-transition="convex">
-						<h3>Operators</h3>
+						<h3>OPERATORS WITH THEIR PRECEDENCE</h3>
 					</section>	
 
 					<section data-transition="convex">
@@ -368,13 +368,23 @@
 
 				<section data-transition="convex">
 					<section>
-					<h3>If Statements</h3>
+					<h4>If Statements</h4>
 					<pre><code>
 	If (condition 1 )
   	{
 	   Executed if condition is true 
  	}
 					</code></pre>
+					<p>Examples:</p>
+          <pre><code>
+            if(3 + 2 % 5)
+            printf("It works");
+            if(a=10)
+            printf("Even this works");
+            if(-5)
+            printf("Suprisingly even this works");
+          </code></pre>
+          <small><p><em>Note:</em> In C programming, Any non-zero value is considered to be true, Whereas 0 is considered to be false.</p></small>
 				</section>	
 
 				<section>
@@ -406,6 +416,25 @@
 				</section>	
 
 				<section data-transition="convex">
+          <h5 style="margin-bottom: 0;">Ternary Operator</h5>
+          <small><p>(as a substitute for if-else statement)</p></small>
+          <pre><code>
+            condition ? expression 1 : expression 2;
+
+            int x,y;
+            scanf("%d",&x);
+            y=(x > 5 ? 3 : 4);
+          </code></pre>
+          <small><p>This statement will store 3 in y if x is greater than 5, otherwise it will store 4 in y. <br> The equivalent if statement will be</p></small>
+          <pre><code>
+            if( x > 5 )
+             y = 3; 
+             else 
+             y = 4; 
+          </code></pre>
+        </section>
+
+				<section data-transition="convex">
 					<section>
 					<h3>Switch Case </h3>
 					<pre><code>	
@@ -429,7 +458,45 @@
 				</section>	
 
 				<section data-transition="convex">
-					<h3>Loop</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Question_mark_grey.svg/2000px-Question_mark_grey.svg.png" style="width: 200px; background-color: transparent; border: none; box-shadow: none;">
+          <p>Question time?</p>
+        </section>
+        <section data-transition="convex">
+          <p>Question: Take values of length and breadth of a rectangle from user and check if it is square or not.</p>
+          <p>Input:</p>
+         <p> 5 3</p>
+          <p>4 4</p>
+          Output:
+          <p>No</p>
+          <p>Yes</p>
+         </section>
+         <section data-transition="convex">
+          <h3>Solution</h3>
+           <pre><code style="overflow: hidden">
+             #include&lt;stdio.h&gt;
+             int main() {
+
+             int x, y;
+             scanf("%d %d", &x,&y);
+
+             if(x==y)
+             printf("Yes");
+
+             else
+             printf("No");
+             return 0;
+           }
+           </code></pre>
+         </section>
+         <section data-transition="convex">
+          <img src="./img/smile.png" class="no-border">
+           <h4>
+             Awesome! Your program can make important decisions now.
+           </h4>
+         </section>
+
+				<section data-transition="convex">
+					<h3>Loops</h3>
 					<br>
 					<p class="fragment fade-up">Loops in programming comes into use when we need to repeatedly execute a block of statements. <br> Until the statement turns False.
 </p>	
@@ -461,6 +528,20 @@
 					<section>
 						<h4>FLOW OF THE FOR LOOP</h4>
 						<img src="./img/forloop.png" alt="" style="background-color: rgb(32, 32, 32); border:none; height: 500px">	
+					</section>
+
+					<section>
+						<h4>Example:</h4>
+						<pre><code>
+             main()
+             {
+              int i;
+              for( i=0 ; i &lt;= 10 ; i++ )
+              printf("%d",i);
+             }
+
+             Output: 1 2 3 4 5 6 7 8 9 10
+           </code></pre>
 					</section>
 				</section>
 
@@ -526,9 +607,9 @@
 							<h3>ARRAY</h3>
 							<p class="fragment fade-up">Collection of items of the same datatype stored at contiguous memory locations</p>
 							<ul>
-								<li class="fragment fade-up">{1, 7, 3, 0, 2}</li>	
-								<li class="fragment fade-up">{‘G’, ‘E’, ‘E’, ‘K’}</li>
-								<li class="fragment fade-up">{‘this’, ‘is’, ‘an’, ‘array’}</li>
+								<li class="fragment fade-up">[1, 7, 3, 0, 2]</li>	
+								<li class="fragment fade-up">[‘G’, ‘E’, ‘E’, ‘K’]</li>
+								<li class="fragment fade-up">[‘this’, ‘is’, ‘an’, ‘array’]</li>
 							</ul>
 						</section>
 
@@ -567,6 +648,14 @@ address of another variable of same data type</p>
 						<br>
 						<p><span style="color: skyblue">THE '&' OPERATOR</span> <--access Memory from Variable</p>
 						<p><span style="color: skyblue">THE '*' OPERATOR</span> <--access Variable from Memory</p>
+					</section>
+
+					<section>
+						<h4>'&amp;' Operator</h4>
+						<p style="font-size: 35px;">To access address of a variable to a pointer, we use the unary operator & (Ampersand) that returns the address of that variable. For example &x gives us address of variable x.</p> 
+						<br>
+						<h4>'*'Operator</h4>
+						<p style="font-size: 35px;">One more operator is unary * (Asterisk) which is used for two things: To declare a pointer variable. When a pointer variable is declared in C/C++, there must be an * before its name. And to access the value stored in the address we use this unary operator that eventually returns the value of the variable located at the address specified by its operand.</p>
 					</section>
 
 					<section>
@@ -640,11 +729,11 @@ address of another variable of same data type</p>
 						</section>
 					</section>
 
-							<section>
+							<section data-transition="convex">
 								<h2>Algorithms</h2>
 							</section>
 
-							<section>
+							<section data-transition="convex">
 								<section>
 									<h3 style="font-weight: bolder">Recursion</h3>
 									<p class="fragment fade-in">The process in which a function calls itself directly or indirectly</p>
@@ -652,12 +741,25 @@ address of another variable of same data type</p>
 								</section>
 
 								<section>
+      <p>Example: A function to return factorial of a number</p>
+      <pre><code>
+            int fact(int n)
+              {
+                if (n <= 1) // base case
+                return 1;
+                else    
+                return n*fact(n-1);     
+              }
+      </code></pre>
+    </section>
+
+								<section>
 									<h4>Let’s see how a Recursive Function works</h4>
 									<img src="./img/recursion-flowchart.png" alt="" class="no-border" style="height: 450px">
 								</section>
 							</section>
 
-							<section>
+							<section data-transition="convex">
 								<section>
 									<h3>Searching</h3>
 									<img src="./img/search.PNG" alt="" class="no-border">
@@ -668,27 +770,32 @@ address of another variable of same data type</p>
 								</section>
 							</section>
 
-							<section>
+							<section data-transition="convex">
 								<section>
 									<h3>Sorting</h3>
 									<img src="./img/sort.PNG" alt="" class="no-border">
 								</section>
 
 								<section>
-									<img src="./img/sorting.PNG" alt="" class="no-border">
+									<img src="./img/sorting.PNG" alt="" class="no-border" style="height: 500px">
 								</section>
 							</section>
 
-							<section>
+							<section data-transition="convex">
 								<h3>Data Structures</h3>
 							</section>
 
-							<section>
+							<section data-transition="convex">
+								<h3>Linked List</h3>
+								<img src="./img/linked-lists.png" alt="" class="no-border">
+							</section>
+
+							<section data-transition="convex">
 								<section>
 									<h3>Stack</h3>
 									<ul>
-										<li class="fragment fade-up">Stack is a linear data structure.</li>
-										<li class="fragment fade-up">It follows a particular order in which the operations are performed.</li>
+										<li class="fragment fade-up">Linear data structure.</li>
+										<li class="fragment fade-up">Follows a particular order in which the operations are to be performed.</li>
 										<li class="fragment fade-up">The order may be LIFO(Last In First Out) or FILO(First In Last Out).</li>
 									</ul>
 								</section>
@@ -701,30 +808,30 @@ address of another variable of same data type</p>
 								<section>
 									<h4>Real World Example</h4>
 									<ul>
-										<li class="fragment fade-up">Piles of plate</li>
-										<li class="fragment fade-up">Heaps of book</li>
-										<li class="fragment fade-up">Submission of latest form</li>
+										<li>Piles of plates</li>
+										<li>Heaps of books</li>
+										<li>Submission of latest forms</li>
 									</ul>
 								</section>
 								
 								<section>
 									<h3>Operations of Stack</h3>
 									<ul>
-										<li class="fragment fade-up"><strong>Push:</strong> Adds an item in the stack.</li>
-										<li class="fragment fade-up"><strong>Pop:</strong> Removes an item from the stack.</li>
-										<li class="fragment fade-up"><strong>Peek or Top:</strong> Returns top element of stack.</li>
-										<li class="fragment fade-up"><strong>isEmpty:</strong> Returns true if stack is empty, else false.</li>
+										<li><strong>Push:</strong> Adds an item in the stack.</li>
+										<li><strong>Pop:</strong> Removes an item from the stack.</li>
+										<li><strong>Peek or Top:</strong> Returns top element of stack.</li>
+										<li><strong>isEmpty:</strong> Returns true if stack is empty, else false.</li>
 									</ul>
-									<p class="fragment fade-up"><small><strong>Time Complexity </strong>of push (), pop(), peek (), isEmpty() the functions :O(1)</small></p>
+									<p><small><strong>Time Complexity </strong>of push (), pop(), peek (), isEmpty() the functions :O(1)</small></p>
 								</section>
 							</section>
 
-							<section>
+							<section data-transition="convex">
 								<section>
 									<h3>Queue</h3>
 									<ul>
-										<li class="fragment fade-up">It’s again a linear data Structure.</li>
-										<li class="fragment fade-up">It follows a particular order in which the operations are performed.</li>
+										<li class="fragment fade-up">Linear data Structure.</li>
+										<li class="fragment fade-up">Follows a particular order in which the operations are performed.</li>
 										<li class="fragment fade-up">The order is First In First Out (FIFO).</li>
 									</ul>
 								</section>
@@ -737,24 +844,47 @@ address of another variable of same data type</p>
 								<section>
 									<h4>Real World Example</h4>
 									<ul>
-										<li class="fragment fade-up">Queue of people</li>
-										<li class="fragment fade-up">Reservation of Tickets </li>
-										<li class="fragment fade-up">When data is transferred from sender to receiver end, queue is used so that data received  in the same form as it is send.</li>
+										<li>Queue of people</li>
+										<li>Reservation of Tickets </li>
+										<li>When data is transferred from sender's end to the receiver's end, queue is used so that the data is received in the same form as it is sent.</li>
 									</ul>
 								</section>
 
 								<section>
 									<h3>Operations of Queue</h3>
 									<ul>
-										<li class="fragment fade-up"><strong>Enqueue:</strong> Adds an item to the queue. 
+										<li><strong>Enqueue:</strong> Adds an item to the queue. 
 </li>
-										<li class="fragment fade-up"><strong>Dequeue:</strong> Removes an item from the queue. </li>
-										<li class="fragment fade-up"><strong>Front:</strong> Points to the first item of the queue.</li>
-										<li class="fragment fade-up"><strong>Rear:</strong> Points to the last item of the queue.</li>
+										<li><strong>Dequeue:</strong> Removes an item from the queue. </li>
+										<li><strong>Front:</strong> Points to the first item of the queue.</li>
+										<li><strong>Rear:</strong> Points to the last item of the queue.</li>
 									</ul>
-									<p class="fragment fade-up"><small><strong>Time Complexity </strong>enqueue(), dequeue(), isFull(), isEmpty(), front() and rear() is O(1).
+									<p><small><strong>Time Complexity </strong>enqueue(), dequeue(), isFull(), isEmpty(), front() and rear() is O(1).
 </small></p>
 								</section>
+							</section>
+
+							<section data-transition="convex">
+								<h3>Competitive Programming</h3>
+							</section>
+
+							<section data-transition="convex">
+								<h3>That's All Guys</h3>
+								<small><p>For Any Queries</p></small>
+								<br>
+  <a href="http://www.facebook.com/nibblecomputersociety" target="_blank">
+  <img src="./img/facebook.svg" width="64px" style="border: none; background-color: black;" class="links">
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.github.com/ncs-jss" target="_blank">
+  <img src="./img/github-icon.svg" height="64px" style="border: none; background-color: black;"  class="links">
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.hackncs.com" target="_blank">
+  <img src="./img/ncsncs_logo.png" height="64px" style="border: none;background-color: black;"  class="links">
+</a>
+<br>
+<h3>Thank You</h3>
 							</section>
 				
 
